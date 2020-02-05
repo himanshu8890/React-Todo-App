@@ -9,7 +9,7 @@ import uuid from "uuid";
 // import logo from './logo.svg';
 
 import Todos from "./components/Todos";
-import axios from "axios";
+// import axios from "axios";
 
 class App extends Component {
     appTitle = "Todo App";
@@ -34,6 +34,7 @@ class App extends Component {
     delTodo = id => {
         axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`).then(res => this.setState({
             todos: [...this.state.todos.filter(todo => todo.id !== id)]
+
         }));
     };
 
